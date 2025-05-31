@@ -42,9 +42,8 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Du kan implementera logik för att skicka formulärdata här
     console.log(values);
-    // Återställ formuläret eller visa ett bekräftelsemeddelande
+
     alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
     form.reset();
   }
@@ -52,7 +51,6 @@ const Contact = () => {
   return (
     <>
       <div className="container max-w-6xl mx-auto px-4 py-8">
-        {/* Hero Section */}
         <div className="flex flex-col items-center justify-center space-y-4 py-12 text-center">
           <Badge variant="outline" className="px-3 py-1 text-sm">
             Kontakt
@@ -68,7 +66,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
           <Card className="flex flex-col items-center text-center p-6">
             <Mail className="h-12 w-12 text-orange-600 mb-4" />
@@ -110,7 +107,6 @@ const Contact = () => {
           </Card>
         </div>
 
-        {/* Contact Form */}
         <div className="py-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
@@ -211,7 +207,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Section */}
         <div className="py-10">
           <h2 className="text-3xl font-bold mb-6">Hitta hit</h2>
           <div className="w-full h-[400px] rounded-lg overflow-hidden bg-muted">
@@ -225,7 +220,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* FAQ or Additional Info */}
         <div className="py-10">
           <h2 className="text-3xl font-bold mb-6">Vanliga frågor</h2>
           <div className="space-y-6">

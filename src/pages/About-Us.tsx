@@ -8,7 +8,6 @@ const AboutUs = () => {
   return (
     <>
       <div className="container max-w-6xl mx-auto px-4 py-8">
-        {/* Hero Section */}
         <div className="flex flex-col items-center justify-center space-y-4 py-12 text-center">
           <Badge variant="outline" className="px-3 py-1 text-sm">
             Om oss
@@ -24,7 +23,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Our Story Section */}
         <div className="py-10">
           <h2 className="text-3xl font-bold mb-6">Vår berättelse</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -56,11 +54,9 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Team Section */}
         <div className="py-10">
           <h2 className="text-3xl font-bold mb-6">Vårt team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Alexander */}
             <div className="bg-background border rounded-lg p-6 flex flex-col items-center text-center">
               <div className="h-24 w-24 rounded-full bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-orange-600">A</span>
@@ -76,7 +72,6 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* Andreas */}
             <div className="bg-background border rounded-lg p-6 flex flex-col items-center text-center">
               <div className="h-24 w-24 rounded-full bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-orange-600">A</span>
@@ -92,7 +87,6 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* Ludvig */}
             <div className="bg-background border rounded-lg p-6 flex flex-col items-center text-center">
               <div className="h-24 w-24 rounded-full bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-orange-600">L</span>
@@ -110,7 +104,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Values Section */}
         <div className="py-10">
           <h2 className="text-3xl font-bold mb-6">Våra värderingar</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,7 +141,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
         <div className="py-12 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Redo att digitalisera din verksamhet?

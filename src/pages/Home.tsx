@@ -16,7 +16,6 @@ const Home = () => {
   return (
     <>
       <div className="container max-w-6xl mx-auto px-4 py-8">
-        {/* Hero Section */}
         <div className="flex flex-col items-center justify-center space-y-4 py-12 text-center">
           <Badge variant="outline" className="px-3 py-1 text-sm">
             Välkommen till
@@ -55,7 +54,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12">
           <Card className="flex flex-col">
             <CardHeader className="space-y-1">

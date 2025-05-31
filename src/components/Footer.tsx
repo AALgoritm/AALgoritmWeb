@@ -1,4 +1,5 @@
 import { Github, Mail, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,24 +20,33 @@ export function Footer() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Kontakt
-            </a>
-            <a
-              href="/privacy"
+            </Link>
+            <Link
+              to="/privacy"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Integritetspolicy
-            </a>
-            <a
-              href="/terms"
+            </Link>
+            <Link
+              to="/terms"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Villkor
-            </a>
+            </Link>
           </div>
 
           <div className="flex space-x-3">
