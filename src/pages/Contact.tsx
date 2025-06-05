@@ -42,10 +42,35 @@ const Contact = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const formEndpoint = "https://formspree.io/f/mldndyew";
 
-    alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
-    form.reset();
+    // Skapa ett FormData-objekt för Formspree
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    if (values.company) formData.append("company", values.company);
+    formData.append("message", values.message);
+
+    fetch(formEndpoint, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert(
+            "Tack för ditt meddelande! Vi återkommer så snart som möjligt."
+          );
+          form.reset();
+        } else {
+          alert("Något gick fel vid sändning. Försök igen senare.");
+        }
+      })
+      .catch(() => {
+        alert("Nätverksfel. Kontrollera din uppkoppling och försök igen.");
+      });
   }
 
   return (
