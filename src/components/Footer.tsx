@@ -1,4 +1,4 @@
-import { Github, Mail, Twitter } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -50,20 +50,6 @@ export function Footer() {
           </div>
 
           <div className="flex space-x-3">
-            <a
-              href="https://github.com/aalgoritm"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">Github</span>
-            </a>
-            <a
-              href="https://twitter.com/aalgoritm"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <Twitter className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
-            </a>
             <a
               href="mailto:kontakt@aalgoritm.se"
               className="text-muted-foreground hover:text-foreground"
