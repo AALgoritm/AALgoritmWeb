@@ -83,7 +83,7 @@ const Home = () => {
               <div className="h-10 w-10 rounded-full bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-2">
                 <Code className="h-5 w-5 text-orange-600" />
               </div>
-              <CardTitle>Ren kod</CardTitle>
+              <CardTitle>Clean code</CardTitle>
               <CardDescription>
                 Eleganta implementationer med moderna kodprinciper.
               </CardDescription>
