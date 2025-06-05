@@ -74,10 +74,10 @@ const Contact = () => {
               Skicka ett mail så återkommer vi inom 24 timmar
             </p>
             <a
-              href="mailto:info@aalgoritm.se"
+              href="mailto:kontakt@aalgoritm.se"
               className="text-orange-600 hover:underline"
             >
-              info@aalgoritm.se
+              kontakt@aalgoritm.se
             </a>
           </Card>
 
