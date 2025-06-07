@@ -1,11 +1,5 @@
 import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@radix-ui/react-tooltip";
 
 export default function ThemeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -28,24 +22,11 @@ export default function ThemeToggle() {
   }, [isDarkMode]);
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className=" p-2 rounded dark:bg-zinc-900 text-gray-800 dark:text-gray-200 cursor-pointer h-8 w-8 flex items-center justify-center"
-          >
-            {isDarkMode ? <Moon /> : <Sun />}
-          </button>
-        </TooltipTrigger>
-        <TooltipContent
-          side="top"
-          align="center"
-          className="rounded p-2 bg-zinc-800 text-white text-sm"
-        >
-          {isDarkMode ? "Växla till ljust läge" : "Växla till mörkt läge"}
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <button
+      onClick={() => setIsDarkMode(!isDarkMode)}
+      className=" p-2 rounded dark:bg-zinc-900 text-gray-800 dark:text-gray-200 cursor-pointer h-8 w-8 flex items-center justify-center"
+    >
+      {isDarkMode ? <Moon /> : <Sun />}
+    </button>
   );
 }

@@ -1,16 +1,23 @@
-# Redirecta HTTP till HTTPS
+# Redirect HTTP to HTTPS
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>
 
-# React-router fix: alla vägar går till index.html
+# React Router fix - handle all routes through index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  
+  # Don't rewrite files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Rewrite everything else to index.html
+  RewriteRule ^ index.html [L]
 </IfModule>
+
+# Ensure proper error handling
+ErrorDocument 404 /index.html

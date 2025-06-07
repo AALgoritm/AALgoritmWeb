@@ -100,7 +100,7 @@ const Contact = () => {
             </p>
             <a
               href="mailto:kontakt@aalgoritm.se"
-              className="text-orange-600 hover:underline"
+              className="text-orange-600 hover:underline mt-auto"
             >
               kontakt@aalgoritm.se
             </a>
@@ -114,7 +114,7 @@ const Contact = () => {
             </p>
             <a
               href="tel:+46701234567"
-              className="text-orange-600 hover:underline"
+              className="text-orange-600 hover:underline mt-auto"
             >
               070-123 45 67
             </a>
@@ -124,7 +124,7 @@ const Contact = () => {
             <MapPin className="h-12 w-12 text-orange-600 mb-4" />
             <h2 className="text-xl font-bold mb-2">Besök oss</h2>
             <p className="text-muted-foreground mb-4">Vi finns i Örebro</p>
-            <address className="not-italic text-orange-600">
+            <address className="not-italic text-orange-600 mt-auto">
               Drottninggatan 12
               <br />
               702 10 Örebro

@@ -3,8 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
 
 export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
@@ -24,9 +32,7 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           <Link
             to="/"
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
+            onClick={() => window.scrollTo(0, 0)}
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Hem
@@ -34,18 +40,14 @@ export function Navbar() {
 
           <Link
             to="/about-us"
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
+            onClick={() => window.scrollTo(0, 0)}
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Om oss
           </Link>
           <Link
             to="/contact"
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
+            onClick={() => window.scrollTo(0, 0)}
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Kontakt
@@ -53,7 +55,7 @@ export function Navbar() {
           <ThemeToggle />
         </nav>
 
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="outline" size="icon">
               <Menu className="h-5 w-5" />
@@ -61,27 +63,37 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <nav className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-6 mt-12">
               <Link
                 to="/"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                onClick={handleLinkClick}
+                className="text-lg font-medium transition-colors hover:text-primary flex items-center py-2"
               >
                 Hem
               </Link>
+              <div className="h-px bg-muted" />
 
               <Link
                 to="/about-us"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                onClick={handleLinkClick}
+                className="text-lg font-medium transition-colors hover:text-primary flex items-center py-2"
               >
                 Om oss
               </Link>
+              <div className="h-px bg-muted" />
+
               <Link
                 to="/contact"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                onClick={handleLinkClick}
+                className="text-lg font-medium transition-colors hover:text-primary flex items-center py-2"
               >
                 Kontakt
               </Link>
-              <ThemeToggle />
+              <div className="h-px bg-muted" />
+
+              <div className="mt-2">
+                <ThemeToggle />
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

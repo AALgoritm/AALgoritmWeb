@@ -72,9 +72,9 @@ const Home = () => {
               </p>
             </CardContent>
             <CardFooter className="pt-2">
-              <Button variant="ghost" className="p-0 h-auto cursor-pointer">
+              {/* <Button variant="ghost" className="p-0 h-auto cursor-pointer">
                 Läs mer <ArrowRight className="ml-1 h-3 w-3" />
-              </Button>
+              </Button> */}
             </CardFooter>
           </Card>
 
@@ -95,9 +95,9 @@ const Home = () => {
               </p>
             </CardContent>
             <CardFooter className="pt-2">
-              <Button variant="ghost" className="p-0 h-auto cursor-pointer">
+              {/* <Button variant="ghost" className="p-0 h-auto cursor-pointer">
                 Läs mer <ArrowRight className="ml-1 h-3 w-3" />
-              </Button>
+              </Button> */}
             </CardFooter>
           </Card>
 
@@ -118,9 +118,9 @@ const Home = () => {
               </p>
             </CardContent>
             <CardFooter className="pt-2">
-              <Button variant="ghost" className="p-0 h-auto cursor-pointer">
+              {/* <Button variant="ghost" className="p-0 h-auto cursor-pointer">
                 Läs mer <ArrowRight className="ml-1 h-3 w-3" />
-              </Button>
+              </Button> */}
             </CardFooter>
           </Card>
         </div>
